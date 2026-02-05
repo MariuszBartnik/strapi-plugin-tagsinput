@@ -62,10 +62,10 @@ const Tags = ({
     const lastTag = newTags[newTags.length - 1];
     const suggestionsArray = suggestions.data || [];
     const existingTag = suggestionsArray.find(
-      (s) => s[attrName]?.toLowerCase() === lastTag.toLowerCase()
+      (s) => s[attrName]?.toLowerCase() === lastTag?.toLowerCase()
     );
 
-    if (!existingTag) {
+    if (lastTag && !existingTag) {
       if (apiUrl) {
         try {
           const response = await axios.post(apiUrl, {
