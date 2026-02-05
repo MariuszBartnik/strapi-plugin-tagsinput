@@ -1,6 +1,6 @@
 {
   "name": "@complai/strapi-plugin-tagsinput",
-  "version": "2.0.4",
+  "version": "2.0.4-alpha.0",
   "description": "Tagsinput plugin for your strapi project",
   "strapi": {
     "name": "tagsinput",
