@@ -6,8 +6,9 @@ import { useIntl } from "react-intl";
 import TagsInput from "react-tagsinput";
 import Autosuggest from "react-autosuggest";
 import { getStyling } from "./styles/global";
+import { getCurrentTheme } from '../utils/getCurrentTheme';
 
-const ThemeStyle = getStyling(localStorage.getItem("STRAPI_THEME"));
+const ThemeStyle = getStyling(getCurrentTheme());
 
 const Tags = ({
   attribute,
@@ -145,7 +146,7 @@ const Tags = ({
           [attrName]: state[attrName] || "",
         }));
     }
-    
+
     return (
       <Autosuggest
         ref={props.ref}
